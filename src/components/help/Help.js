@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Help = ()=>(
+const Help = (props)=>(
     <div>
         This is Help page.
     </div>

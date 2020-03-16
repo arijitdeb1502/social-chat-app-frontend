@@ -1,0 +1,23 @@
+.app-name{
+    float: left;
+    margin-right: 10%;
+}
+
+.all-pages{
+    float: left;
+}
+
+.user-registration-or-signin{
+    float: right;
+}
+
+.nav-link{
+    margin-right: 10%;
+    text-decoration: none;
+}
+
+.header-element{
+    background-color: whitesmoke;
+    margin-top: 0;
+    padding: 2%;
+}

@@ -12,11 +12,11 @@ class ChattingApp extends Component{
       return(
         <BrowserRouter>
           <div>
-            <Header/>
+            <Header />
             <Switch>
-              <Route exact path="/downloads" render={(props) => <Downloads {...props}  />} />
-              <Route exact path="/features" render={(props) => <Features {...props}  />} />
-              <Route exact path="/help" render={(props) => <Help {...props}  />} />
+              <Route exact={true} path="/downloads" render={(props) => <Downloads {...props}  />} />
+              <Route exact={true} path="/help" render={(props) => <Help {...props}  />} />
+              <Route exact={true} path="/features" render={(props) => <Features {...props}  />} />
             </Switch>
           </div>
         </BrowserRouter>
