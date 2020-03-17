@@ -5,10 +5,13 @@
 
 .all-pages{
     float: left;
+    margin-bottom: 0px;
 }
 
-.user-registration-or-signin{
+.user-registration-or-signin-menu{
+    position: relative;
     float: right;
+    margin-top: 0px;
 }
 
 .nav-link{
@@ -19,5 +22,32 @@
 .header-element{
     background-color: whitesmoke;
     margin-top: 0;
-    padding: 2%;
+    padding: 3.5%;
+}
+
+.signin-button{
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 15px;
+    font-family: sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.signin-button:hover,.signin-button:focus{
+    font-weight: bold;
+}
+
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd
 }

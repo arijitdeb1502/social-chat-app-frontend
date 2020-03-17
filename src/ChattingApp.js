@@ -8,11 +8,18 @@ import Help from "./components/help/Help";
 
 class ChattingApp extends Component{
 
+    
+
     render() {
+
+      const headerProps = {
+          heading : 'My Chattng App'
+      }
+
       return(
         <BrowserRouter>
           <div>
-            <Header />
+            <Header {...headerProps}/>
             <Switch>
               <Route exact={true} path="/downloads" render={(props) => <Downloads {...props}  />} />
               <Route exact={true} path="/help" render={(props) => <Help {...props}  />} />
