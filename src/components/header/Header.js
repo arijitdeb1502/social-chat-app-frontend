@@ -40,7 +40,12 @@ const Header = (props)=>(
             <div className="user-registration-or-signin-menu">
                 <button className="signin-button" onClick={handleDropdown} >Sign in</button>
                 <div className="dropdown-menu" id="dropdown-item-id" >
-                    <NavLink to="/registration" exact={true} className="nav-link-dropdown" activeClassName="is-active">
+                    <NavLink to="/registration" 
+                             exact={true} 
+                             className="nav-link-dropdown" 
+                             activeClassName="is-active"
+                             onClick={props.resetHeaderDisplayHandler}
+                    >
                         Registration
                     </NavLink>
                     <NavLink to="/signin" exact={true} className="nav-link-dropdown" activeClassName="is-active">
