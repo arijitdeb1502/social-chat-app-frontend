@@ -12,9 +12,8 @@ class UserSigninPage extends Component{
 
     onClickSignonPageHandler(){
 
-        //this.props.history.push("http://localhost:3000/");
         this.props.resetHeaderDisplayHandler();  
-
+        this.props.history.push("http://localhost:3000/");
         
     }
 

@@ -13,7 +13,7 @@ class UserRegistration extends Component {
 
     onClickHandler(){
         this.props.resetHeaderDisplayHandler();  
-        // this.props.history.push("http://localhost:3000/"); 
+        this.props.history.push("http://localhost:3000/"); 
     }
 
     render() {
