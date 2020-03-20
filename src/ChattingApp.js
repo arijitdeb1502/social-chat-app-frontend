@@ -9,17 +9,16 @@ import UserSigninPage from "./components/menubar/pages/signin/UserSigninPage";
 
 
 class ChattingApp extends Component{
-
   
     constructor(){
       
       super();
-
       this.resetHeaderDisplayHandler=this.resetHeaderDisplayHandler.bind(this);
 
       this.state = {
         showHeader: true
       }
+
     }
 
     resetHeaderDisplayHandler = () =>{
@@ -75,6 +74,5 @@ class ChattingApp extends Component{
 
 
 }
-
 
 export default ChattingApp;
