@@ -24,14 +24,19 @@ class ChattingApp extends Component{
 
     resetHeaderDisplayHandler = () =>{
 
+      console.log(this.state);
+
+      
+        
         this.setState( (prevState)=>{
 
-          return{
-            showHeader: !prevState.showHeader
-          }
-          
-        }
-      )
+            return({
+              showHeader: !prevState.showHeader
+            })
+          }          
+  
+        )
+        
     }
     
 

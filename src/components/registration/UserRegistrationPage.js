@@ -12,13 +12,14 @@ class UserRegistration extends Component {
     }
 
     onClickHandler(){
-        this.props.history.push("http://localhost:3000/"); 
         this.props.resetHeaderDisplayHandler();  
+        // this.props.history.push("http://localhost:3000/"); 
     }
 
     render() {
         return (
           <div>
+            <h1>This is UserRegistration page</h1>  
             <NavLink to="/" exact={true} activeClassName="is-active">
                  <button onClick={this.onClickHandler}>
                      Home
