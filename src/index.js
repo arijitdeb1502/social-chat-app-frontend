@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ChattingApp from './ChattingApp';
+import ChattingAppRoutes from './router/ChattingAppRoutes';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<ChattingApp />, document.getElementById('root'));
+ReactDOM.render(<ChattingAppRoutes />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -42,7 +42,6 @@ class UserRegistration extends Component {
 
     onFormSubmitHandler = (e) => {
         e.preventDefault();
-        console.log(e.target);
         console.log(this.state);
     }
 
