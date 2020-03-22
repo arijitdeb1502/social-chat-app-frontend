@@ -15,6 +15,8 @@ class ChattingAppRoutes extends Component{
       super();
       this.resetHeaderDisplayHandler=this.resetHeaderDisplayHandler.bind(this);
 
+      this.baseUrl="http://localhost:3001/api/v1";
+
       this.state = {
         showHeader: true
       }
@@ -60,7 +62,8 @@ class ChattingAppRoutes extends Component{
               />
               <Route exact={true} path="/registration" 
                                   render={(props) => <UserRegistrationPage {...props}  
-                                  resetHeaderDisplayHandler={this.resetHeaderDisplayHandler} />} 
+                                  resetHeaderDisplayHandler={this.resetHeaderDisplayHandler} 
+                                  baseUrl={this.baseUrl}/>} 
               />
               <Route exact={true} path="/signin" 
                                   render={(props) => <UserSigninPage {...props}  

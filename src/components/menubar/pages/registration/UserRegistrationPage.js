@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import validator from 'validator';
-import constants from '../../../../constants/AllPageConfigurations';
+// import constants from '../../../../constants/AllPageConfigurations';
 import './styles/Registration.css';
 
 class UserRegistration extends Component {
@@ -73,20 +73,20 @@ class UserRegistration extends Component {
 
              
               const settings = {
-                Method: 'POST',
-                Body: JSON.stringify({
+                method: 'POST',
+                body: JSON.stringify({
                   name,
                   email,
                   password,
                   age
                 }),
-                Headers: {
+                headers: {
                   'Content-Type': 'application/json',
                 }
               }
           
                
-              const resp=await fetch( constants.UserRegistrationPage.userRegistrationUrl , settings); 
+              const resp=await fetch( this.props.baseUrl +'/user/signup' , settings); 
               console.log(resp);
             
 
