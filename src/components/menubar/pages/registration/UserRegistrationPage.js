@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import validator from 'validator';
+import constants from '../../../../constants/AllPageConfigurations';
 import './styles/Registration.css';
 
 class UserRegistration extends Component {
@@ -45,10 +46,11 @@ class UserRegistration extends Component {
         //this.props.history.push("http://localhost:3000/"); 
     }
 
-    onFormSubmitHandler = (e) => {
+    onFormSubmitHandler = async (e) => {
         e.preventDefault();
         
         const { name,email,password,age } = { ...this.state };
+        
 
         this.setState(()=>{
           return {
@@ -59,11 +61,40 @@ class UserRegistration extends Component {
           }
         })
 
-        console.log(name.replace(/ /g,''));
+     
+        const validFormFields = validator.isAlpha(name.replace(/ /g,'')) &&
+                                   validator.isEmail(email) &&
+                                   this.isValidPassword(password) &&
+                                   (validator.isInt(age) && this.isMinAge(age));
+        
+        console.log(validFormFields);
 
+        if( validFormFields ) {
+
+             
+              const settings = {
+                Method: 'POST',
+                Body: JSON.stringify({
+                  name,
+                  email,
+                  password,
+                  age
+                }),
+                Headers: {
+                  'Content-Type': 'application/json',
+                }
+              }
+          
+               
+              const resp=await fetch( constants.UserRegistrationPage.userRegistrationUrl , settings); 
+              console.log(resp);
+            
+
+        } 
+    
+        
         // const userBody={ name,email,password,age };
 
-        console.log(this.state);
         
     }
 
