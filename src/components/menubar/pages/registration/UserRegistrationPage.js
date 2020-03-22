@@ -49,13 +49,13 @@ class UserRegistration extends Component {
         e.preventDefault();
         
         const { name,email,password,age } = { ...this.state };
-        const passwordIsValid=this.isValidPassword(password);
 
         this.setState(()=>{
           return {
             showNameErrMsg: !validator.isAlpha(name.replace(/ /g,'')),
             showEmailErrMsg: !validator.isEmail(email),
-            showPasswordErrMsg: !passwordIsValid
+            showPasswordErrMsg: !this.isValidPassword(password),
+            showAgeErrMsg: !(validator.isInt(age) && this.isMinAge(age))
           }
         })
 
@@ -71,6 +71,10 @@ class UserRegistration extends Component {
 
       return password.length >=6 ? true:false 
 
+    }
+
+    isMinAge = (age)=>{
+        return age >=18 ? true:false
     }
 
     render() {
@@ -113,6 +117,9 @@ class UserRegistration extends Component {
                 value={this.state.age}
                 onChange={this.onChangeHandler}
               />
+              {this.state.showAgeErrMsg && <div>{this.state.age} is not a valid age to use this app.<br/>
+                                                      Age should be more than or equal to 18 years.
+                                           </div>}
               <button className="RegisterUserButton">Register User</button>
               </form>
               <NavLink to="/" exact={true} activeClassName="is-active">
