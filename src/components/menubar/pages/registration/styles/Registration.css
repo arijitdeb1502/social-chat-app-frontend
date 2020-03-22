@@ -50,3 +50,8 @@ label{
     margin-left: 35px;
     margin-top: 35px;
 }
+
+.formValidationError{
+    margin-left: 38px;
+    color: red;
+}

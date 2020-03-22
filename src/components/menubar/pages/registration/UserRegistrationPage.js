@@ -90,7 +90,7 @@ class UserRegistration extends Component {
                 value={this.state.name}
                 onChange={this.onChangeHandler}      
               />
-              {this.state.showNameErrMsg && <div>"{this.state.name}" is not a valid name.</div>}
+              {this.state.showNameErrMsg && <div className="formValidationError">"{this.state.name}" is not a valid name.</div>}
               <label>Email: </label>
               <input 
                 type="email"
@@ -99,7 +99,7 @@ class UserRegistration extends Component {
                 value={this.state.email}
                 onChange={this.onChangeHandler}
               />
-              {this.state.showEmailErrMsg && <div>{this.state.email} is not a valid email.</div>}
+              {this.state.showEmailErrMsg && <div className="formValidationError">{this.state.email} is not a valid email.</div>}
               <label>password: </label>
               <input 
                 type="password"
@@ -108,7 +108,7 @@ class UserRegistration extends Component {
                 value={this.state.password}
                 onChange={this.onChangeHandler}
               />
-              {this.state.showPasswordErrMsg && <div>{this.state.password} is not a valid password.</div>}
+              {this.state.showPasswordErrMsg && <div className="formValidationError">{this.state.password} is not a valid password.</div>}
               <label>Age: </label>
               <input 
                 type="number"
@@ -117,7 +117,7 @@ class UserRegistration extends Component {
                 value={this.state.age}
                 onChange={this.onChangeHandler}
               />
-              {this.state.showAgeErrMsg && <div>{this.state.age} is not a valid age to use this app.<br/>
+              {this.state.showAgeErrMsg && <div className="formValidationError">{this.state.age} is not a valid age to use this app.<br/>
                                                       Age should be more than or equal to 18 years.
                                            </div>}
               <button className="RegisterUserButton">Register User</button>
